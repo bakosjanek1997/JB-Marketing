@@ -1,8 +1,11 @@
 import React from 'react';
-import AiSphere from './AiSphere';
+import AIsphere from './AIsphere'; // JAVÍTVA: AiSphere -> AIsphere
 import { ArrowRight, Calendar } from 'lucide-react';
+// ELTÁVOLÍTVA: import { Translation } from '../types';
 
-const Hero: React.FC = () => {
+// ELTÁVOLÍTVA: interface HeroProps { t: Translation['hero']; }
+
+const Hero: React.FC = () => { // MÓDOSÍTVA: Hero: React.FC<HeroProps> -> Hero: React.FC
   const handleScrollToBooking = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault();
     const target = document.getElementById('booking-calendar') || document.getElementById('contact');
@@ -14,7 +17,7 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Animation */}
-      <AiSphere />
+      <AIsphere /> // JAVÍTVA: AiSphere -> AIsphere
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
