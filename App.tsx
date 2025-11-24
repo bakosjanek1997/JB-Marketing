@@ -7,11 +7,8 @@ import Pricing from './components/Pricing';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import { TRANSLATIONS } from './constants';
-import { Language } from './types';
 
 function App() {
-  const [lang, setLang] = useState<Language>('HU');
   const [isDark, setIsDark] = useState(false);
 
   // Initialize theme based on preference
@@ -33,28 +30,23 @@ function App() {
     }
   };
 
-  const t = TRANSLATIONS[lang];
-
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300 font-sans">
       <Navbar 
-        lang={lang} 
-        setLang={setLang} 
         isDark={isDark} 
         toggleTheme={toggleTheme} 
-        t={t.nav}
       />
       
       <main>
-        <Hero t={t.hero} />
-        <Services t={t.services} />
-        <CaseStudies t={t.stats} />
-        <Pricing t={t.pricing} />
-        <About t={t.about} />
-        <Contact t={t.contact} />
+        <Hero />
+        <Services />
+        <CaseStudies />
+        <Pricing />
+        <About />
+        <Contact />
       </main>
 
-      <Footer t={t.footer} />
+      <Footer />
     </div>
   );
 }
