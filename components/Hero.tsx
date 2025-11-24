@@ -1,5 +1,5 @@
 import React from 'react';
-import AISphere from './AISphere';
+import AIsphere from './AIsphere.tsx';
 import { Translation } from '../types';
 import { ArrowRight, Calendar } from 'lucide-react';
 
