@@ -1,5 +1,5 @@
 import React from 'react';
-import AiSphere from './AiSphere';
+import AiSphere from './AISphere';
 import { Translation } from '../types';
 import { ArrowRight, Calendar } from 'lucide-react';
 
