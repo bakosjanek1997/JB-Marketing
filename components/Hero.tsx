@@ -1,5 +1,5 @@
 import React from 'react';
-import AISphere from './AISphere';
+import AiSphere from './AiSphere';
 import { ArrowRight, Calendar } from 'lucide-react';
 
 const Hero: React.FC = () => {
@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
   return (
     <section id="hero" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
       {/* Background Animation */}
-      <AISphere />
+      <AiSphere />
       
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
