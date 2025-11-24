@@ -1,0 +1,1 @@
+Komponensek mappa.
