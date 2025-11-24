@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="hu" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="JB Marketing - AI alapú marketing és automatizáció vállalkozásoknak. Hirdetéskezelés, weboldal készítés és profitoptimalizálás." />
+    <meta name="keywords" content="AI marketing, marketing ügynökség, automatizáció, weboldal készítés, lead generálás" />
+    <meta property="og:title" content="JB Marketing - AI Driven Growth" />
+    <meta property="og:description" content="Növeld a vállalkozásod profitját célzott hirdetésekkel és okos automatizációkkal." />
+    <meta property="og:type" content="website" />
+    <title>JB Marketing - AI Driven Growth</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN (Using CDN for simplicity, but package.json supports local build too) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      // Safe config initialization
+      window.onload = function() {
+        if (window.tailwind) {
+          window.tailwind.config = {
+            darkMode: 'class',
+            theme: {
+              extend: {
+                colors: {
+                  primary: {
+                    DEFAULT: '#0ea5e9', // Sky 500
+                    dark: '#0284c7', // Sky 600
+                  },
+                  secondary: {
+                    DEFAULT: '#0f172a', // Slate 900
+                    light: '#f8fafc', // Slate 50
+                  }
+                },
+                fontFamily: {
+                  sans: ['Inter', 'sans-serif'],
+                }
+              }
+            }
+          };
+        }
+      };
+    </script>
+
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Inter', sans-serif; }
+      /* Custom scrollbar */
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #f1f1f1; }
+      .dark ::-webkit-scrollbar-track { background: #1e293b; }
+      ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+      ::-webkit-scrollbar-thumb:hover { background: #555; }
+    </style>
+
+    <!-- Error Handler for Blank Screen Debugging -->
+    <script>
+      window.onerror = function(message, source, lineno, colno, error) {
+        document.body.innerHTML = '<div style="color:red; padding:20px; font-family:monospace; background:#fff; z-index:9999; position:relative;"><h1>Application Error</h1><p>' + message + '</p><p>Source: ' + source + ':' + lineno + '</p></div>';
+        console.error("Global Error:", error);
+      };
+    </script>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "recharts": "https://aistudiocdn.com/recharts@^3.5.0",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300">
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
