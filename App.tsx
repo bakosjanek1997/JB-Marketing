@@ -8,6 +8,34 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
+// Új komponens a Google Naptár beágyazásához
+const AppointmentBooking = () => {
+    const googleCalendarEmbed = `
+        <div class="container mx-auto px-4 py-16">
+            <h2 class="text-4xl font-bold mb-8 text-primary dark:text-primary-light text-center">
+                Foglaljon időpontot AI Marketing Konzultációra
+            </h2>
+            <div class="shadow-2xl rounded-lg overflow-hidden border border-gray-200 dark:border-slate-800 p-2">
+                <iframe 
+                    src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0RGkyqxojc4_mfGlxvWryI7gznNbZJgLg1toVl9X5P9De7K4DTd29swNPKi1kWT5XSajRdUagL?gv=true" 
+                    style="border: 0" 
+                    width="100%" 
+                    height="700" 
+                    frameborder="0"
+                ></iframe>
+                </div>
+        </div>
+    `;
+
+    // Reactben iframe beágyazáshoz a dangerouslySetInnerHTML használata szükséges
+    return (
+        <section id="booking" className="py-12 md:py-20 bg-secondary-light dark:bg-slate-900 transition-colors duration-300">
+            <div dangerouslySetInnerHTML={{ __html: googleCalendarEmbed }} />
+        </section>
+    );
+};
+
+
 function App() {
   const [isDark, setIsDark] = useState(false);
 
@@ -43,6 +71,8 @@ function App() {
         <CaseStudies />
         <Pricing />
         <About />
+        {/* IDE ÉPÍTETTÜK BE AZ ÚJ, MŰKÖDŐ NAPTÁR SZEKCIÓT */}
+        <AppointmentBooking />
         <Contact />
       </main>
 
